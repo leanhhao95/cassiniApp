@@ -12,8 +12,7 @@ class CassiniViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        splitViewController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,4 +50,18 @@ extension UIViewController {
             return self
         }
     }
+}
+
+// MARK: - <#Mark#>
+
+extension CassiniViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        if primaryViewController.contentViewController == self {
+            if let imageVC = secondaryViewController.contentViewController as? ImageViewController, imageVC.imageURL == nil {
+                return true
+            }
+        }
+        return false
+    }
+
 }
