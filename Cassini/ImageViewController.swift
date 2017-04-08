@@ -22,14 +22,20 @@ class ImageViewController: UIViewController {
     var imageURL: URL? {
         didSet {
             image = nil
-            fetchImage()
+            if view.window != nil {
+                fetchImage()
+            }
         }
     }
     
     private func fetchImage() {
         guard let url = imageURL else {return}
-        guard let data = try? Data(contentsOf: url) else {return}
-        image = UIImage(data: data)
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let data = try? Data(contentsOf: url) else {return}
+            DispatchQueue.main.async {[unowned self] in
+                self.image = UIImage(data: data)
+            }
+        }
         
     }
 
@@ -43,6 +49,13 @@ class ImageViewController: UIViewController {
         }
         get {
             return imageView.image
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if image == nil {
+            fetchImage()
         }
     }
     

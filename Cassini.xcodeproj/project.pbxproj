@@ -61,9 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				FF84DF4C1E9886F900A1DE28 /* Main.storyboard */,
-				FF84DF621E989F7800A1DE28 /* CassiniViewController.swift */,
 				FF84DF571E9886F900A1DE28 /* Info.plist */,
 				FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */,
+				FF84DF621E989F7800A1DE28 /* CassiniViewController.swift */,
 				FF84DF601E988A2900A1DE28 /* DemoURL.swift */,
 				FF84DF5D1E98871D00A1DE28 /* Supporting files */,
 			);
@@ -322,6 +322,7 @@
 				FF84DF5C1E9886F900A1DE28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
