@@ -9,6 +9,8 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
@@ -30,10 +32,14 @@ class ImageViewController: UIViewController {
     
     private func fetchImage() {
         guard let url = imageURL else {return}
+        spinner.startAnimating()
         DispatchQueue.global(qos: .userInitiated).async {
-            guard let data = try? Data(contentsOf: url) else {return}
-            DispatchQueue.main.async {[unowned self] in
+            guard let data = try? Data(contentsOf: url) else {
+                self.spinner.stopAnimating()
+                return}
+            DispatchQueue.main.async {
                 self.image = UIImage(data: data)
+                self.spinner.stopAnimating()
             }
         }
         
