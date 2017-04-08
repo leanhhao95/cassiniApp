@@ -13,6 +13,7 @@
 		FF84DF531E9886F900A1DE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF84DF521E9886F900A1DE28 /* Assets.xcassets */; };
 		FF84DF561E9886F900A1DE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84DF541E9886F900A1DE28 /* LaunchScreen.storyboard */; };
 		FF84DF5F1E98877700A1DE28 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */; };
+		FF84DF611E988A2900A1DE28 /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF601E988A2900A1DE28 /* DemoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF84DF551E9886F900A1DE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF84DF571E9886F900A1DE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		FF84DF601E988A2900A1DE28 /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FF84DF4C1E9886F900A1DE28 /* Main.storyboard */,
 				FF84DF571E9886F900A1DE28 /* Info.plist */,
 				FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */,
+				FF84DF601E988A2900A1DE28 /* DemoURL.swift */,
 			);
 			path = Cassini;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF84DF611E988A2900A1DE28 /* DemoURL.swift in Sources */,
 				FF84DF511E9886F900A1DE28 /* Cassini.xcdatamodeld in Sources */,
 				FF84DF5F1E98877700A1DE28 /* ImageViewController.swift in Sources */,
 				FF84DF491E9886F900A1DE28 /* AppDelegate.swift in Sources */,

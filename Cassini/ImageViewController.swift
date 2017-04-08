@@ -10,7 +10,20 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
-    var imageURL: URL?
+    var imageURL: URL? {
+        didSet {
+            image = nil
+            fetchImage()
+        }
+    }
+    
+    private func fetchImage() {
+        guard let url = imageURL else {return}
+        guard let data = try? Data(contentsOf: url) else {return}
+        image = UIImage(data: data)
+        
+    }
+
     
     private var imageView = UIImageView()
     private var image: UIImage? {
