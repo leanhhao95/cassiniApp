@@ -39,6 +39,7 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
+        imageURL = URL(string: DemoURL.Standford)
         
         
     }
