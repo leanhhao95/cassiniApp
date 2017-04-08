@@ -10,6 +10,12 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.delegate = self
+            scrollView.contentSize = imageView.frame.size
+        }
+    }
     var imageURL: URL? {
         didSet {
             image = nil
@@ -30,6 +36,7 @@ class ImageViewController: UIViewController {
         set {
             imageView.image = newValue
             imageView.sizeToFit()
+            scrollView.contentSize = imageView.frame.size
         }
         get {
             return imageView.image
@@ -38,9 +45,15 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(imageView)
+        scrollView.addSubview(imageView)
         imageURL = URL(string: DemoURL.Standford)
         
         
     }
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension ImageViewController: UIScrollViewDelegate {
+    
 }
