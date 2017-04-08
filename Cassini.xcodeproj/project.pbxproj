@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FF84DF491E9886F900A1DE28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF481E9886F900A1DE28 /* AppDelegate.swift */; };
-		FF84DF4B1E9886F900A1DE28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF4A1E9886F900A1DE28 /* ViewController.swift */; };
 		FF84DF4E1E9886F900A1DE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84DF4C1E9886F900A1DE28 /* Main.storyboard */; };
 		FF84DF511E9886F900A1DE28 /* Cassini.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF4F1E9886F900A1DE28 /* Cassini.xcdatamodeld */; };
 		FF84DF531E9886F900A1DE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF84DF521E9886F900A1DE28 /* Assets.xcassets */; };
 		FF84DF561E9886F900A1DE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84DF541E9886F900A1DE28 /* LaunchScreen.storyboard */; };
+		FF84DF5F1E98877700A1DE28 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF84DF451E9886F900A1DE28 /* Cassini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF84DF481E9886F900A1DE28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF84DF4A1E9886F900A1DE28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF84DF4D1E9886F900A1DE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF84DF501E9886F900A1DE28 /* Cassini.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cassini.xcdatamodel; sourceTree = "<group>"; };
 		FF84DF521E9886F900A1DE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF84DF551E9886F900A1DE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF84DF571E9886F900A1DE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		FF84DF471E9886F900A1DE28 /* Cassini */ = {
 			isa = PBXGroup;
 			children = (
-				FF84DF481E9886F900A1DE28 /* AppDelegate.swift */,
-				FF84DF4A1E9886F900A1DE28 /* ViewController.swift */,
+				FF84DF5D1E98871D00A1DE28 /* Supporting files */,
 				FF84DF4C1E9886F900A1DE28 /* Main.storyboard */,
-				FF84DF521E9886F900A1DE28 /* Assets.xcassets */,
-				FF84DF541E9886F900A1DE28 /* LaunchScreen.storyboard */,
 				FF84DF571E9886F900A1DE28 /* Info.plist */,
-				FF84DF4F1E9886F900A1DE28 /* Cassini.xcdatamodeld */,
+				FF84DF5E1E98877700A1DE28 /* ImageViewController.swift */,
 			);
 			path = Cassini;
+			sourceTree = "<group>";
+		};
+		FF84DF5D1E98871D00A1DE28 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FF84DF481E9886F900A1DE28 /* AppDelegate.swift */,
+				FF84DF521E9886F900A1DE28 /* Assets.xcassets */,
+				FF84DF541E9886F900A1DE28 /* LaunchScreen.storyboard */,
+				FF84DF4F1E9886F900A1DE28 /* Cassini.xcdatamodeld */,
+			);
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF84DF4B1E9886F900A1DE28 /* ViewController.swift in Sources */,
 				FF84DF511E9886F900A1DE28 /* Cassini.xcdatamodeld in Sources */,
+				FF84DF5F1E98877700A1DE28 /* ImageViewController.swift in Sources */,
 				FF84DF491E9886F900A1DE28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
