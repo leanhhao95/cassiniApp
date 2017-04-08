@@ -31,7 +31,7 @@ class CassiniViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Storyboard.ShowImageSegue {
-            if let imageVC = segue.destination as? ImageViewController {
+            if let imageVC = segue.destination.contentViewController as? ImageViewController {
                 if let imageName = (sender as? UIButton)?.currentTitle {
                     imageVC.imageURL = DemoURL.NASAImageNamed(imageName: imageName)
                 }
@@ -39,4 +39,16 @@ class CassiniViewController: UIViewController {
         }
     }
 
+}
+
+// MARK: - contentViewController
+
+extension UIViewController {
+    var contentViewController: UIViewController {
+        if let navContentVC = self as? UINavigationController {
+            return navContentVC.visibleViewController!
+        } else {
+            return self
+        }
+    }
 }

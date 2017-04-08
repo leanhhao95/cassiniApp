@@ -14,7 +14,7 @@
             <objects>
                 <splitViewController id="pwU-x3-113" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="Vez-kH-9pP"/>
+                        <segue destination="W0V-ii-4rZ" kind="relationship" relationship="detailViewController" id="Vez-kH-9pP"/>
                         <segue destination="zym-RA-fep" kind="relationship" relationship="masterViewController" id="fjb-gd-9VR"/>
                     </connections>
                 </splitViewController>
@@ -41,21 +41,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                         <state key="normal" title="Cassini"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="lYZ-pM-yeV"/>
+                                            <segue destination="W0V-ii-4rZ" kind="showDetail" identifier="Show Image" id="lYZ-pM-yeV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0d-6y-jgd">
                                         <rect key="frame" x="0.0" y="30" width="100" height="30"/>
                                         <state key="normal" title="Earth"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="opK-Er-DyB"/>
+                                            <segue destination="W0V-ii-4rZ" kind="showDetail" identifier="Show Image" id="opK-Er-DyB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-AS-RdP">
                                         <rect key="frame" x="0.0" y="60" width="100" height="30"/>
                                         <state key="normal" title="Saturn"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Show Image" id="RXj-I5-zgI"/>
+                                            <segue destination="W0V-ii-4rZ" kind="showDetail" identifier="Show Image" id="RXj-I5-zgI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -101,13 +101,14 @@
                             <constraint firstItem="A2b-8H-NVo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l6g-xJ-mZg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GaB-2C-9H9"/>
                     <connections>
                         <outlet property="scrollView" destination="A2b-8H-NVo" id="W92-pB-2pj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="742"/>
+            <point key="canvasLocation" x="895.20000000000005" y="741.67916041979015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="glJ-co-5tB">
@@ -126,6 +127,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2t-JY-XLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1071.2" y="-36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9gN-pc-1GK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W0V-ii-4rZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ryJ-J6-U1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="C1K-eG-Ko0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqw-Iw-uYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="741.67916041979015"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
