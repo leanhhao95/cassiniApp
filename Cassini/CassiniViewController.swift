@@ -63,7 +63,7 @@ extension UIViewController {
     }
 }
 
-// MARK: - <#Mark#>
+// MARK: 
 
 extension CassiniViewController: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {

@@ -8,8 +8,8 @@
 
 import UIKit
 
+var cache = NSCache<AnyObject, AnyObject>()
 class ImageViewController: UIViewController {
-    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     @IBOutlet weak var scrollView: UIScrollView! {
@@ -32,19 +32,27 @@ class ImageViewController: UIViewController {
     
     private func fetchImage() {
         guard let url = imageURL else {return}
+        if let imageFromCache = cache.object(forKey: url as AnyObject) as? UIImage {
+            image = imageFromCache
+            return
+        }
         spinner.startAnimating()
         DispatchQueue.global(qos: .userInitiated).async {
             guard let data = try? Data(contentsOf: url) else {
                 self.spinner.stopAnimating()
                 return}
             DispatchQueue.main.async {
-                self.image = UIImage(data: data)
+                if let imageFromCache = UIImage(data: data) {
+                    self.image = imageFromCache
+                    cache.setObject(imageFromCache, forKey: url as AnyObject)
                 self.spinner.stopAnimating()
+            }
+           
             }
         }
         
     }
-
+    
     
     var imageView = UIImageView()
     private var image: UIImage? {
@@ -68,8 +76,6 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.addSubview(imageView)
-        
-        
     }
 }
 
